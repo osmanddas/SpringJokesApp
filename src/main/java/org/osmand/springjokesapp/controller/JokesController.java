@@ -19,6 +19,7 @@ public class JokesController {
 
     @RequestMapping({"/"})
     public String showJoke(Model model){
+        logger.info("in showJoke....");
         model.addAttribute("joke", jokesService.getJokes());
         return "chucknorris";
     }
